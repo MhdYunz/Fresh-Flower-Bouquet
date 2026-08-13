@@ -21,6 +21,8 @@
     --rose-deep:#8A1749;
     --shadow: 0 20px 45px -20px rgba(41,41,41,0.25);
     --radius: 22px;
+    --floral-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23B01E5C' stroke-width='1.1' stroke-opacity='0.35'%3E%3Ccircle cx='38' cy='42' r='15'/%3E%3Ccircle cx='38' cy='42' r='7.5'/%3E%3Ccircle cx='172' cy='94' r='12'/%3E%3Ccircle cx='172' cy='94' r='5.5'/%3E%3Ccircle cx='95' cy='205' r='10'/%3E%3Ccircle cx='95' cy='205' r='4.5'/%3E%3C/g%3E%3Cg fill='none' stroke='%23315C45' stroke-width='1.2' stroke-opacity='0.32'%3E%3Cpath d='M62 128 Q78 106 94 128 Q78 150 62 128Z'/%3E%3Cpath d='M152 172 Q171 150 190 172 Q171 194 152 172Z'/%3E%3Cpath d='M18 190 C29 173 46 173 57 190'/%3E%3Cpath d='M205 30 C216 13 233 13 244 30'/%3E%3Cpath d='M120 150 C126 138 140 138 146 150'/%3E%3C/g%3E%3Cg fill='%23C9A45C' fill-opacity='0.4'%3E%3Ccircle cx='112' cy='40' r='2.4'/%3E%3Ccircle cx='120' cy='47' r='2.4'/%3E%3Ccircle cx='104' cy='47' r='2.4'/%3E%3Ccircle cx='116' cy='54' r='2.4'/%3E%3Ccircle cx='202' cy='192' r='2.4'/%3E%3Ccircle cx='210' cy='199' r='2.4'/%3E%3Ccircle cx='194' cy='199' r='2.4'/%3E%3Ccircle cx='40' cy='150' r='2.2'/%3E%3Ccircle cx='47' cy='157' r='2.2'/%3E%3Ccircle cx='33' cy='157' r='2.2'/%3E%3C/g%3E%3Cg fill='none' stroke='%238E7CC3' stroke-width='1' stroke-opacity='0.3'%3E%3Ccircle cx='180' cy='210' r='6'/%3E%3Ccircle cx='230' cy='150' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    --floral-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23C9A45C' stroke-width='1.1' stroke-opacity='0.4'%3E%3Ccircle cx='38' cy='42' r='15'/%3E%3Ccircle cx='38' cy='42' r='7.5'/%3E%3Ccircle cx='172' cy='94' r='12'/%3E%3Ccircle cx='172' cy='94' r='5.5'/%3E%3Ccircle cx='95' cy='205' r='10'/%3E%3Ccircle cx='95' cy='205' r='4.5'/%3E%3C/g%3E%3Cg fill='none' stroke='%23F7DDE3' stroke-width='1.2' stroke-opacity='0.28'%3E%3Cpath d='M62 128 Q78 106 94 128 Q78 150 62 128Z'/%3E%3Cpath d='M152 172 Q171 150 190 172 Q171 194 152 172Z'/%3E%3Cpath d='M18 190 C29 173 46 173 57 190'/%3E%3Cpath d='M205 30 C216 13 233 13 244 30'/%3E%3C/g%3E%3Cg fill='%23F7DDE3' fill-opacity='0.35'%3E%3Ccircle cx='112' cy='40' r='2.4'/%3E%3Ccircle cx='120' cy='47' r='2.4'/%3E%3Ccircle cx='104' cy='47' r='2.4'/%3E%3Ccircle cx='202' cy='192' r='2.4'/%3E%3Ccircle cx='210' cy='199' r='2.4'/%3E%3Ccircle cx='194' cy='199' r='2.4'/%3E%3C/g%3E%3C/svg%3E");
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -42,7 +44,34 @@
   img{max-width:100%;display:block;}
   ul{list-style:none;margin:0;padding:0;}
   button{font-family:inherit;cursor:pointer;}
-  .container{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .container{max-width:1180px;margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  /* Floral texture layers */
+  .floral-bg{position:relative;}
+  .floral-bg::before{
+    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:var(--floral-light);background-size:240px 240px;background-repeat:repeat;
+  }
+  .floral-bg.dark::before{background-image:var(--floral-dark);}
+  .spray{position:absolute;z-index:0;pointer-events:none;}
+  .spray img{width:100%;height:100%;display:block;object-fit:contain;filter:drop-shadow(0 14px 22px rgba(41,41,41,.18));}
+  .hero-spray-tl{top:-50px;left:-70px;width:280px;height:340px;transform:rotate(-20deg);opacity:.9;}
+  .hero-spray-br{bottom:-70px;right:-80px;width:300px;height:360px;transform:rotate(158deg) scaleX(-1);opacity:.85;}
+  .about-spray{top:-40px;right:-50px;width:220px;height:260px;opacity:.55;transform:rotate(12deg);}
+  .services-spray{bottom:-50px;left:-60px;width:230px;height:270px;opacity:.4;transform:rotate(-10deg) scaleX(-1);}
+  .gallery-spray{top:-30px;right:-40px;width:200px;height:240px;opacity:.35;transform:rotate(18deg);}
+  .footer-spray{top:-40px;right:10px;width:170px;height:210px;opacity:.5;}
+  .contact-spray{bottom:-40px;left:-50px;width:210px;height:250px;opacity:.85;}
+  .featured-spray-l{top:-30px;left:-40px;width:170px;height:200px;opacity:.7;transform:rotate(-14deg);}
+  .featured-spray-r{bottom:-40px;right:-30px;width:190px;height:220px;opacity:.7;transform:rotate(150deg) scaleX(-1);}
+  .reviews-spray-l{top:-20px;left:-30px;width:150px;height:170px;opacity:.5;transform:rotate(-10deg);}
+  .reviews-spray-r{bottom:-30px;right:-20px;width:160px;height:190px;opacity:.5;transform:rotate(20deg) scaleX(-1);}
+  .why-spray-l{bottom:-30px;left:-40px;width:160px;height:180px;opacity:.55;transform:rotate(8deg);}
+  .why-spray-r{top:-30px;right:-30px;width:150px;height:170px;opacity:.55;transform:rotate(-18deg) scaleX(-1);}
+  .enquiry-spray{top:-30px;left:40%;width:140px;height:160px;opacity:.5;transform:rotate(6deg);}
+  .about-spray-2{bottom:-30px;left:-40px;width:180px;height:210px;opacity:.5;transform:rotate(-16deg) scaleX(-1);}
+  .services-spray-2{top:-20px;right:-30px;width:150px;height:170px;opacity:.45;transform:rotate(12deg);}
+  .gallery-spray-2{bottom:-30px;left:-30px;width:170px;height:190px;opacity:.4;transform:rotate(-8deg) scaleX(-1);}
   .eyebrow{
     font-size:12.5px;
     letter-spacing:3.5px;
@@ -100,8 +129,8 @@
   .nav-cta{display:flex;align-items:center;gap:14px;}
   .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;}
   .hamburger span{width:24px;height:2px;background:var(--green-deep);border-radius:2px;}
-  .mobile-menu{display:none;position:fixed;top:0;right:0;bottom:0;width:78%;max-width:320px;background:var(--cream);z-index:1100;box-shadow:-20px 0 50px rgba(0,0,0,.2);padding:28px 26px;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
-  .mobile-menu.open{transform:translateX(0);}
+  .mobile-menu{display:flex;flex-direction:column;visibility:hidden;position:fixed;top:0;right:0;bottom:0;width:78%;max-width:320px;background:var(--cream);z-index:1100;box-shadow:-20px 0 50px rgba(0,0,0,.2);padding:28px 26px;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1), visibility .35s;}
+  .mobile-menu.open{visibility:visible;transform:translateX(0);}
   .mobile-menu ul{display:flex;flex-direction:column;gap:22px;margin-top:40px;}
   .mobile-menu a{font-size:19px;font-family:'Cormorant Garamond',serif;font-weight:600;}
   .menu-close{background:none;border:none;font-size:26px;color:var(--green-deep);position:absolute;top:22px;right:22px;}
@@ -118,6 +147,7 @@
     position:relative;
     overflow:hidden;
   }
+  .about,.services,.gallery,.contact,footer,.featured,.why,.enquiry,.reviews{overflow:hidden;}
   .hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
   .hero-tag{margin-bottom:22px;}
   .hero h1{font-size:clamp(40px,5.2vw,66px);line-height:1.05;color:var(--green-deep);}
@@ -348,6 +378,30 @@
   @keyframes pulse{0%,100%{box-shadow:0 14px 30px -8px rgba(37,211,102,.6);}50%{box-shadow:0 14px 40px -4px rgba(37,211,102,.85);}}
   .wa-float svg{width:22px;height:22px;}
 
+  /* Falling petals overlay */
+  .petal-layer{position:fixed;inset:0;z-index:850;pointer-events:none;overflow:hidden;}
+  .petal{
+    position:absolute;top:-40px;
+    border-radius:0% 100% 0% 100% / 0% 100% 0% 100%;
+    opacity:.92;
+    box-shadow:inset -4px -6px 8px rgba(120,20,60,.3), inset 3px 4px 6px rgba(255,255,255,.6);
+    animation-name:petal-fall, petal-sway;
+    animation-timing-function:linear, ease-in-out;
+    animation-iteration-count:infinite, infinite;
+    will-change:transform;
+  }
+  @keyframes petal-fall{
+    0%{transform:translateY(-10vh) rotate(var(--r0,0deg));}
+    100%{transform:translateY(110vh) rotate(var(--r1,360deg));}
+  }
+  @keyframes petal-sway{
+    0%,100%{margin-left:0;}
+    50%{margin-left:60px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .petal-layer{display:none;}
+  }
+
   :focus-visible{outline:2px solid var(--rose);outline-offset:2px;}
 
   @media(max-width:1020px){
@@ -390,7 +444,7 @@
 <header>
   <div class="nav-wrap">
     <a href="#home" class="brand">
-      <img src="logo.png" alt="Fresh Flower Bouquet Shop Coimbatore logo">
+      <img src="images/logo.png" alt="Fresh Flower Bouquet Shop Coimbatore logo">
       <div class="brand-text">
         <b>Fresh Flower Bouquet</b>
         <span>Shop &middot; Coimbatore</span>
@@ -430,6 +484,8 @@
 
 <!-- ===== Hero ===== -->
 <section class="hero" id="home">
+  <div class="spray hero-spray-tl"><img src="images/flowers/bouquet_full.png" alt="" loading="lazy"></div>
+  <div class="spray hero-spray-br"><img src="images/flowers/rose_spray.png" alt="" loading="lazy"></div>
   <div class="container">
     <div class="hero-copy">
       <span class="eyebrow hero-tag">Fresh Flower Bouquet Shop, Coimbatore</span>
@@ -442,7 +498,7 @@
     </div>
     <div class="hero-art">
       <div class="ring">
-        <img class="logo-big" src="logo.png" alt="Bouquet and floral monogram illustration">
+        <img class="logo-big" src="images/logo.png" alt="Bouquet and floral monogram illustration">
       </div>
       <div class="float-chip chip1">🌸 Fresh Flowers</div>
       <div class="float-chip chip2">💐 Custom Bouquets</div>
@@ -453,7 +509,9 @@
 </section>
 
 <!-- ===== About ===== -->
-<section class="about pad" id="about">
+<section class="about pad floral-bg" id="about">
+  <div class="spray about-spray"><img src="images/flowers/rose_single.png" alt="" loading="lazy"></div>
+  <div class="spray about-spray-2"><img src="images/flowers/leaf_sprig.png" alt="" loading="lazy"></div>
   <div class="container">
     <div class="sec-head" style="margin-bottom:60px;">
       <span class="eyebrow">About Us</span>
@@ -461,7 +519,7 @@
     </div>
     <div class="about-grid">
       <div class="about-visual">
-        <img src="logo.png" alt="Shop monogram">
+        <img src="images/logo.png" alt="Shop monogram">
         <h3>A Coimbatore studio built on fresh stems</h3>
         <p>Every bouquet leaves our hands the same day it's cut &mdash; designed around your occasion, theme and preferences, from a single hand-tied bunch to a full wedding venue.</p>
       </div>
@@ -500,7 +558,9 @@
 </div>
 
 <!-- ===== Services ===== -->
-<section class="services pad" id="services">
+<section class="services pad floral-bg" id="services">
+  <div class="spray services-spray"><img src="images/flowers/flower_cluster_blush.png" alt="" loading="lazy"></div>
+  <div class="spray services-spray-2"><img src="images/flowers/petals_scatter.png" alt="" loading="lazy"></div>
   <div class="container">
     <div class="sec-head">
       <span class="eyebrow">What We Create</span>
@@ -521,7 +581,9 @@
 </section>
 
 <!-- ===== Featured work ===== -->
-<section class="featured pad-tight">
+<section class="featured pad-tight floral-bg">
+  <div class="spray featured-spray-l"><img src="images/flowers/rose_single.png" alt="" loading="lazy"></div>
+  <div class="spray featured-spray-r"><img src="images/flowers/flower_cluster_blush.png" alt="" loading="lazy"></div>
   <div class="container">
     <div class="sec-head" style="margin-bottom:44px;">
       <span class="eyebrow">Signature Pieces</span>
@@ -537,7 +599,9 @@
 </section>
 
 <!-- ===== Our Works / Gallery ===== -->
-<section class="gallery pad" id="works">
+<section class="gallery pad floral-bg" id="works">
+  <div class="spray gallery-spray"><img src="images/flowers/flower_cluster_gold.png" alt="" loading="lazy"></div>
+  <div class="spray gallery-spray-2"><img src="images/flowers/rose_single.png" alt="" loading="lazy"></div>
   <div class="container">
     <div class="sec-head">
       <span class="eyebrow">Our Works</span>
@@ -576,7 +640,9 @@
 </div>
 
 <!-- ===== Reviews ===== -->
-<section class="reviews pad" id="reviews">
+<section class="reviews pad floral-bg dark" id="reviews">
+  <div class="spray reviews-spray-l"><img src="images/flowers/petals_scatter.png" alt="" loading="lazy"></div>
+  <div class="spray reviews-spray-r"><img src="images/flowers/flower_cluster_gold.png" alt="" loading="lazy"></div>
   <div class="container">
     <div class="sec-head">
       <span class="eyebrow">Google Reviews</span>
@@ -605,7 +671,9 @@
 </section>
 
 <!-- ===== Why choose us ===== -->
-<section class="why pad" id="why">
+<section class="why pad floral-bg" id="why">
+  <div class="spray why-spray-l"><img src="images/flowers/leaf_sprig.png" alt="" loading="lazy"></div>
+  <div class="spray why-spray-r"><img src="images/flowers/rose_spray.png" alt="" loading="lazy"></div>
   <div class="container">
     <div class="sec-head">
       <span class="eyebrow">Why Choose Us</span>
@@ -622,7 +690,8 @@
 </section>
 
 <!-- ===== Enquiry form ===== -->
-<section class="enquiry pad" id="enquiry">
+<section class="enquiry pad floral-bg" id="enquiry">
+  <div class="spray enquiry-spray"><img src="images/flowers/lavender_sprig.png" alt="" loading="lazy"></div>
   <div class="container">
     <div class="enq-wrap">
       <div class="enq-side">
@@ -675,7 +744,8 @@
 </section>
 
 <!-- ===== Contact ===== -->
-<section class="contact pad" id="contact">
+<section class="contact pad floral-bg" id="contact">
+  <div class="spray contact-spray"><img src="images/flowers/leaf_sprig.png" alt="" loading="lazy"></div>
   <div class="container">
     <div class="sec-head">
       <span class="eyebrow">Visit Us</span>
@@ -713,11 +783,12 @@
 </section>
 
 <!-- ===== Footer ===== -->
-<footer>
+<footer class="floral-bg dark">
+  <div class="spray footer-spray"><img src="images/flowers/lavender_sprig.png" alt="" loading="lazy"></div>
   <div class="container">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand"><img src="logo.png" alt="Logo"><b>Fresh Flower Bouquet Shop</b></div>
+        <div class="foot-brand"><img src="images/logo.png" alt="Logo"><b>Fresh Flower Bouquet Shop</b></div>
         <p class="tag">Fresh flowers for beautiful moments &mdash; bouquets and event decoration across Coimbatore.</p>
         <div class="foot-social">
           <a href="#" aria-label="Instagram">📷</a>
@@ -757,6 +828,9 @@
 </footer>
 
 <!-- ===== Floating WhatsApp ===== -->
+<!-- ===== Falling petals ===== -->
+<div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+
 <a class="wa-float" href="https://wa.me/919367556002?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20flower%20bouquet%20and%20decoration%20services." target="_blank" rel="noopener">
   <svg viewBox="0 0 32 32" fill="#fff"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.7 4.607 1.902 6.475L4 29l7.723-1.867A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3zm6.995 17.02c-.293.826-1.454 1.51-2.38 1.706-.633.132-1.46.238-4.24-.91-3.556-1.464-5.847-5.06-6.024-5.294-.176-.234-1.44-1.913-1.44-3.651 0-1.737.912-2.593 1.235-2.948.322-.354.704-.443.94-.443.234 0 .47.002.674.012.216.01.507-.082.792.605.293.705 1 2.44 1.088 2.617.088.176.147.382.03.616-.117.234-.176.382-.352.588-.176.206-.372.46-.53.617-.176.176-.36.367-.155.72.206.353.914 1.51 1.965 2.446 1.35 1.204 2.49 1.577 2.843 1.753.352.176.558.147.763-.088.206-.234.882-1.03 1.117-1.383.234-.353.47-.293.792-.176.323.117 2.05.968 2.402 1.144.352.176.586.264.674.412.088.147.088.853-.205 1.68z"/></svg>
   <span class="wa-text">WhatsApp</span>
@@ -857,6 +931,40 @@
     const url = `https://wa.me/919367556002?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   });
+
+  // Falling petals
+  (function(){
+    const layer = document.getElementById('petalLayer');
+    const gradients = [
+      'linear-gradient(135deg, #ffe3ec 0%, #f6a8c6 45%, #e0679e 75%, #b0215f 100%)',
+      'linear-gradient(140deg, #ffeef2 0%, #f2b9d0 40%, #d97ba3 72%, #9c1c56 100%)',
+      'linear-gradient(130deg, #fff0f5 0%, #f8c2d6 42%, #e084ab 70%, #a82060 100%)'
+    ];
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduceMotion || !layer) return;
+    const petalCount = window.innerWidth < 640 ? 14 : 24;
+    for(let i=0;i<petalCount;i++){
+      const p = document.createElement('div');
+      p.className = 'petal';
+      const width = 14 + Math.random()*8;
+      const height = width * (1.15 + Math.random()*0.2);
+      p.style.width = width + 'px';
+      p.style.height = height + 'px';
+      p.style.left = Math.random()*100 + 'vw';
+      p.style.background = gradients[Math.floor(Math.random()*gradients.length)];
+      const startRot = Math.floor(Math.random()*360);
+      const spins = 1 + Math.random()*1.5;
+      const endRot = startRot + (Math.random()<0.5 ? -1 : 1) * spins * 360;
+      p.style.setProperty('--r0', startRot + 'deg');
+      p.style.setProperty('--r1', endRot + 'deg');
+      if(Math.random()<0.5) p.style.borderRadius = '100% 0% 100% 0% / 100% 0% 100% 0%';
+      const fallDuration = 9 + Math.random()*10;
+      const swayDuration = 3 + Math.random()*3;
+      p.style.animationDuration = fallDuration + 's, ' + swayDuration + 's';
+      p.style.animationDelay = (-Math.random()*fallDuration) + 's, ' + (-Math.random()*swayDuration) + 's';
+      layer.appendChild(p);
+    }
+  })();
 
   // Header shadow on scroll
   const header = document.querySelector('header');
