@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Fresh Flower Bouquet Shop Coimbatore logo">
+  <defs>
+    <linearGradient id="ribbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C2185B"/>
+      <stop offset="100%" stop-color="#7A0F3E"/>
+    </linearGradient>
+    <linearGradient id="ribbon2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8A1749"/>
+      <stop offset="100%" stop-color="#D4276E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ribbon "X" -->
+  <path d="M60 130 L150 130 L200 190 L250 130 L340 130 L240 220 L340 300 L250 300 L200 240 L150 300 L60 300 L160 210 Z"
+        fill="url(#ribbon)"/>
+  <!-- Ribbon "F" accent (right wing) -->
+  <path d="M215 130 L305 130 L275 165 L235 165 L260 195 L225 195 Z" fill="url(#ribbon2)" opacity="0.92"/>
+  <!-- Left wing notch -->
+  <path d="M60 130 L150 130 L120 165 L85 165 Z" fill="url(#ribbon2)" opacity="0.92"/>
+
+  <!-- Bouquet stems -->
+  <g stroke="#3F6B4E" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M200 190 C198 165 196 145 195 118"/>
+    <path d="M200 190 C202 160 206 140 210 112"/>
+    <path d="M200 190 C196 155 188 130 178 100"/>
+    <path d="M200 190 C204 155 214 128 222 96"/>
+  </g>
+
+  <!-- Leaves -->
+  <g fill="#4C7A5A">
+    <ellipse cx="185" cy="150" rx="14" ry="6" transform="rotate(-35 185 150)"/>
+    <ellipse cx="216" cy="150" rx="14" ry="6" transform="rotate(35 216 150)"/>
+    <ellipse cx="192" cy="120" rx="12" ry="5" transform="rotate(-20 192 120)"/>
+  </g>
+
+  <!-- Lavender spikes -->
+  <g fill="#8E7CC3">
+    <circle cx="175" cy="95" r="3"/><circle cx="178" cy="103" r="3"/><circle cx="172" cy="103" r="3"/>
+    <circle cx="176" cy="111" r="3"/><circle cx="180" cy="118" r="3"/><circle cx="173" cy="118" r="3"/>
+    <circle cx="177" cy="126" r="3"/><circle cx="181" cy="134" r="3"/><circle cx="174" cy="134" r="3"/>
+  </g>
+
+  <!-- Rose blooms -->
+  <g>
+    <circle cx="160" cy="130" r="15" fill="#E86A93"/>
+    <circle cx="160" cy="130" r="9" fill="#F090AE"/>
+    <circle cx="197" cy="98" r="13" fill="#F4A6C0"/>
+    <circle cx="197" cy="98" r="7" fill="#F8C4D6"/>
+    <circle cx="228" cy="118" r="14" fill="#F2C14E"/>
+    <circle cx="228" cy="118" r="8" fill="#F7D77E"/>
+    <circle cx="238" cy="145" r="12" fill="#E8517C"/>
+    <circle cx="238" cy="145" r="6" fill="#F088A8"/>
+    <circle cx="177" cy="150" r="10" fill="#C9A0DC"/>
+    <circle cx="177" cy="150" r="5" fill="#DBBCE8"/>
+    <circle cx="212" cy="132" r="9" fill="#F2C14E"/>
+    <circle cx="212" cy="132" r="5" fill="#F7D77E"/>
+  </g>
+</svg>

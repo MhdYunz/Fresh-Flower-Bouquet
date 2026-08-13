@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Flower Bouquet Shop Coimbatore | Weddings &amp; Event Floral Decor</title>
+<meta name="description" content="Fresh flower bouquets and elegant wedding & event floral decoration in Coimbatore. Bouquets, wedding decor, bed decor, private events. WhatsApp us for a quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#315C45;
+    --green-deep:#213E30;
+    --pink:#F7DDE3;
+    --pink-soft:#FBEEF1;
+    --cream:#FFF9F2;
+    --gold:#C9A45C;
+    --ink:#292929;
+    --rose:#B01E5C;
+    --rose-deep:#8A1749;
+    --shadow: 0 20px 45px -20px rgba(41,41,41,0.25);
+    --radius: 22px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Jost',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    letter-spacing:.2px;
+    margin:0;
+  }
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  ul{list-style:none;margin:0;padding:0;}
+  button{font-family:inherit;cursor:pointer;}
+  .container{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-size:12.5px;
+    letter-spacing:3.5px;
+    text-transform:uppercase;
+    color:var(--rose);
+    font-weight:500;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--rose);display:inline-block;}
+  section{position:relative;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:15px 30px;
+    border-radius:100px;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:.3px;
+    border:1px solid transparent;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:linear-gradient(135deg,var(--rose),var(--rose-deep));color:#fff;box-shadow:0 14px 28px -10px rgba(176,30,92,.55);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px -10px rgba(176,30,92,.65);}
+  .btn-ghost{background:transparent;border-color:rgba(41,41,41,.25);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--ink);background:rgba(41,41,41,.04);}
+  .btn-gold{background:linear-gradient(135deg,var(--gold),#a9813f);color:#fff;box-shadow:0 14px 26px -10px rgba(201,164,92,.55);}
+  .btn-gold:hover{transform:translateY(-2px);}
+
+  /* Botanical divider */
+  .divider{display:flex;align-items:center;justify-content:center;margin:0 auto;width:100%;}
+  .divider svg{width:180px;height:22px;}
+
+  /* Header */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:900;
+    background:rgba(255,249,242,.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(49,92,69,.08);
+    transition:background .3s ease;
+  }
+  .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 28px;max-width:1180px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand img{height:52px;width:auto;}
+  .brand-text{display:flex;flex-direction:column;line-height:1.1;}
+  .brand-text b{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--green-deep);}
+  .brand-text span{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--rose);}
+  nav ul{display:flex;gap:34px;align-items:center;}
+  nav a{font-size:14.5px;font-weight:500;color:var(--ink);position:relative;padding:4px 0;}
+  nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--rose);transition:width .25s ease;}
+  nav a:hover::after{width:100%;}
+  .nav-cta{display:flex;align-items:center;gap:14px;}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;}
+  .hamburger span{width:24px;height:2px;background:var(--green-deep);border-radius:2px;}
+  .mobile-menu{display:none;position:fixed;top:0;right:0;bottom:0;width:78%;max-width:320px;background:var(--cream);z-index:1100;box-shadow:-20px 0 50px rgba(0,0,0,.2);padding:28px 26px;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
+  .mobile-menu.open{transform:translateX(0);}
+  .mobile-menu ul{display:flex;flex-direction:column;gap:22px;margin-top:40px;}
+  .mobile-menu a{font-size:19px;font-family:'Cormorant Garamond',serif;font-weight:600;}
+  .menu-close{background:none;border:none;font-size:26px;color:var(--green-deep);position:absolute;top:22px;right:22px;}
+  .scrim{display:none;position:fixed;inset:0;background:rgba(33,62,48,.4);z-index:1050;}
+  .scrim.open{display:block;}
+
+  /* Hero */
+  .hero{
+    padding:168px 0 110px;
+    background:
+      radial-gradient(1100px 550px at 82% -10%, rgba(247,221,227,.9), transparent 60%),
+      radial-gradient(700px 500px at -5% 20%, rgba(201,164,92,.16), transparent 60%),
+      var(--cream);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
+  .hero-tag{margin-bottom:22px;}
+  .hero h1{font-size:clamp(40px,5.2vw,66px);line-height:1.05;color:var(--green-deep);}
+  .hero h1 em{font-style:italic;color:var(--rose);}
+  .hero p.lede{margin:26px 0 34px;font-size:17px;line-height:1.7;color:#4a4a4a;max-width:480px;}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-art{position:relative;display:flex;align-items:center;justify-content:center;}
+  .hero-art .ring{
+    width:440px;height:440px;border-radius:50%;
+    background:linear-gradient(160deg, var(--pink) 0%, var(--pink-soft) 55%, var(--cream) 100%);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow);
+    position:relative;
+  }
+  .hero-art .ring::before{
+    content:"";position:absolute;inset:22px;border-radius:50%;border:1px dashed rgba(176,30,92,.35);
+  }
+  .hero-art img.logo-big{width:270px;filter:drop-shadow(0 22px 30px rgba(176,30,92,.25));}
+  .float-chip{
+    position:absolute;background:#fff;padding:10px 16px;border-radius:100px;
+    font-size:13.5px;font-weight:500;box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:8px;color:var(--green-deep);
+    animation:float 5s ease-in-out infinite;
+  }
+  .chip1{top:6%;left:-6%;animation-delay:0s;}
+  .chip2{bottom:14%;left:-12%;animation-delay:1.1s;}
+  .chip3{top:12%;right:-8%;animation-delay:.6s;}
+  .chip4{bottom:2%;right:-4%;animation-delay:1.7s;}
+  @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+
+  @media(prefers-reduced-motion:reduce){
+    .float-chip{animation:none;}
+    *{scroll-behavior:auto;}
+  }
+
+  /* Section heading */
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 50px;}
+  .sec-head h2{font-size:clamp(30px,3.6vw,44px);color:var(--green-deep);margin:14px 0 14px;}
+  .sec-head p{color:#5a5a5a;font-size:15.5px;line-height:1.7;}
+  .pad{padding:100px 0;}
+  .pad-tight{padding:80px 0;}
+
+  /* About */
+  .about{background:var(--cream);}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start;}
+  .about-visual{
+    background:linear-gradient(160deg,var(--green) 0%, var(--green-deep) 100%);
+    border-radius:var(--radius);
+    padding:44px 34px;
+    color:#fff;
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+  }
+  .about-visual::after{
+    content:"";position:absolute;width:220px;height:220px;border-radius:50%;
+    background:rgba(255,255,255,.06);top:-60px;right:-60px;
+  }
+  .about-visual img{width:96px;margin-bottom:22px;}
+  .about-visual h3{font-size:26px;margin-bottom:12px;}
+  .about-visual p{font-size:14.5px;line-height:1.7;opacity:.88;}
+  .about-copy p{font-size:15.5px;line-height:1.85;color:#454545;margin-bottom:18px;}
+  .about-copy p.lead{font-size:18px;font-family:'Cormorant Garamond',serif;color:var(--green-deep);font-style:italic;font-weight:500;}
+  .about-list{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .about-item{
+    background:#fff;border:1px solid rgba(49,92,69,.1);border-radius:16px;padding:20px 20px;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .about-item:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .about-item .ic{font-size:22px;margin-bottom:8px;display:block;}
+  .about-item b{font-size:15px;color:var(--green-deep);display:block;margin-bottom:4px;}
+  .about-item span{font-size:13px;color:#6a6a6a;line-height:1.55;}
+
+  /* Services */
+  .services{background:linear-gradient(180deg,var(--pink-soft), var(--cream) 60%);}
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .svc-card{
+    background:#fff;border-radius:18px;padding:30px 24px;text-align:left;
+    box-shadow:0 10px 30px -18px rgba(41,41,41,.25);
+    border:1px solid rgba(49,92,69,.07);
+    transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+  }
+  .svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--rose);}
+  .svc-ic{width:52px;height:52px;border-radius:14px;background:var(--pink-soft);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px;}
+  .svc-card h3{font-size:19px;color:var(--green-deep);margin-bottom:8px;}
+  .svc-card p{font-size:13.8px;color:#666;line-height:1.6;margin-bottom:16px;}
+  .svc-card a{font-size:12.5px;letter-spacing:1px;text-transform:uppercase;color:var(--rose);font-weight:600;}
+
+  /* Featured work */
+  .featured{background:var(--cream);}
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .feat-card{
+    border-radius:20px;overflow:hidden;position:relative;height:340px;
+    display:flex;align-items:flex-end;padding:26px;color:#fff;
+    box-shadow:var(--shadow);
+  }
+  .feat-card::before{content:"";position:absolute;inset:0;opacity:.92;}
+  .feat-card .tag{position:relative;z-index:2;}
+  .feat-card .tag small{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.85;margin-bottom:6px;}
+  .feat-card .tag h3{font-size:22px;font-family:'Cormorant Garamond',serif;}
+  .f1::before{background:linear-gradient(200deg, rgba(176,30,92,.25), rgba(49,92,69,.85)), repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 12px, transparent 12px 24px);}
+  .f1{background:linear-gradient(160deg,#8f2255,#3a6b4f);}
+  .f2{background:linear-gradient(160deg,#c9a45c,#7c5a2a);}
+  .f2::before{background:linear-gradient(200deg, rgba(255,255,255,.15), rgba(49,92,69,.55));}
+  .f3{background:linear-gradient(160deg,#d98aa3,#8a1749);}
+  .f3::before{background:linear-gradient(200deg, rgba(255,255,255,.12), rgba(138,23,73,.5));}
+  .f4{background:linear-gradient(160deg,#3f7358,#213e30);}
+  .f4::before{background:linear-gradient(200deg, rgba(201,164,92,.25), rgba(33,62,48,.55));}
+
+  /* Gallery */
+  .gallery{background:linear-gradient(180deg,var(--cream), var(--pink-soft) 40%, var(--cream));}
+  .filter-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:44px;}
+  .filter-btn{
+    padding:10px 22px;border-radius:100px;border:1px solid rgba(49,92,69,.25);
+    background:transparent;font-size:13.5px;font-weight:500;color:var(--green-deep);
+    transition:.25s ease;
+  }
+  .filter-btn.active,.filter-btn:hover{background:var(--green-deep);color:#fff;border-color:var(--green-deep);}
+  .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .gal-item{
+    position:relative;border-radius:16px;overflow:hidden;height:230px;cursor:pointer;
+    display:flex;align-items:flex-end;box-shadow:0 10px 26px -16px rgba(41,41,41,.3);
+  }
+  .gal-item::before{content:"";position:absolute;inset:0;}
+  .gal-item .gi-info{position:relative;z-index:2;padding:16px;color:#fff;width:100%;display:flex;justify-content:space-between;align-items:flex-end;}
+  .gal-item .gi-info span{font-size:12.5px;letter-spacing:1px;text-transform:uppercase;font-weight:500;}
+  .gal-item .play{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:var(--rose);font-size:14px;}
+  .g-bouquet::before{background:linear-gradient(160deg,#e6a6bb,#8a1749);}
+  .g-wedding::before{background:linear-gradient(160deg,#c9a45c,#5f4620);}
+  .g-bed::before{background:linear-gradient(160deg,#d9bfd0,#4c2b52);}
+  .g-events::before{background:linear-gradient(160deg,#7fa88f,#213e30);}
+  .gal-note{text-align:center;margin-top:34px;font-size:13.5px;color:#777;}
+
+  /* Lightbox */
+  .lightbox{display:none;position:fixed;inset:0;background:rgba(20,15,17,.92);z-index:1200;align-items:center;justify-content:center;flex-direction:column;padding:30px;}
+  .lightbox.open{display:flex;}
+  .lb-box{width:min(560px,90vw);height:min(400px,60vh);border-radius:18px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Cormorant Garamond',serif;font-size:26px;text-align:center;padding:20px;}
+  .lb-controls{display:flex;gap:24px;margin-top:26px;}
+  .lb-controls button{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;width:44px;height:44px;border-radius:50%;font-size:18px;}
+  .lb-close{position:absolute;top:26px;right:30px;background:none;border:none;color:#fff;font-size:30px;}
+
+  /* Reviews */
+  .reviews{background:var(--green-deep);color:#fff;}
+  .reviews .sec-head p{color:rgba(255,255,255,.75);}
+  .reviews .eyebrow{color:var(--gold);}
+  .reviews .eyebrow::before{background:var(--gold);}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .rev-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;padding:28px 26px;backdrop-filter:blur(6px);
+  }
+  .stars{color:var(--gold);font-size:15px;letter-spacing:2px;margin-bottom:14px;}
+  .rev-card p.quote{font-size:15px;line-height:1.7;color:rgba(255,255,255,.9);margin-bottom:18px;font-style:italic;}
+  .rev-who{display:flex;align-items:center;gap:10px;}
+  .rev-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--rose));}
+  .rev-who b{font-size:13.5px;display:block;}
+  .rev-who span{font-size:11.5px;color:rgba(255,255,255,.55);}
+  .rev-cta{text-align:center;margin-top:40px;}
+  .rev-cta a{color:var(--gold);font-size:14px;font-weight:500;border-bottom:1px solid var(--gold);padding-bottom:3px;}
+
+  /* Why choose */
+  .why{background:var(--cream);}
+  .why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+  .why-item{text-align:center;padding:10px;}
+  .why-ic{width:64px;height:64px;border-radius:50%;background:var(--pink-soft);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;}
+  .why-item h3{font-size:17px;color:var(--green-deep);margin-bottom:8px;}
+  .why-item p{font-size:13px;color:#6a6a6a;line-height:1.6;}
+
+  /* Enquiry form */
+  .enquiry{background:linear-gradient(180deg,var(--pink-soft),var(--cream));}
+  .enq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;background:#fff;border-radius:26px;box-shadow:var(--shadow);overflow:hidden;}
+  .enq-side{background:linear-gradient(160deg,var(--rose),var(--rose-deep));color:#fff;padding:48px 40px;}
+  .enq-side h3{font-size:28px;margin-bottom:16px;}
+  .enq-side p{font-size:14.5px;line-height:1.8;opacity:.9;margin-bottom:26px;}
+  .enq-side ul{display:flex;flex-direction:column;gap:14px;}
+  .enq-side li{font-size:13.8px;display:flex;gap:10px;align-items:flex-start;opacity:.95;}
+  .enq-form{padding:48px 44px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+  .field{display:flex;flex-direction:column;gap:7px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-size:12.5px;font-weight:500;color:var(--green-deep);letter-spacing:.3px;}
+  .field input,.field select,.field textarea{
+    padding:12px 14px;border-radius:10px;border:1px solid rgba(49,92,69,.22);
+    font-family:'Jost',sans-serif;font-size:14px;background:var(--cream);color:var(--ink);
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--rose);outline-offset:1px;background:#fff;}
+  .field textarea{resize:vertical;min-height:80px;}
+  .enq-form .btn-primary{width:100%;justify-content:center;margin-top:6px;padding:16px;font-size:15.5px;}
+
+  /* Contact + map */
+  .contact{background:var(--cream);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .contact-card{background:#fff;border-radius:22px;padding:40px;box-shadow:var(--shadow);border:1px solid rgba(49,92,69,.08);}
+  .contact-card h3{font-size:26px;color:var(--green-deep);margin-bottom:6px;}
+  .contact-card .sub{color:var(--rose);font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:24px;display:block;}
+  .contact-row{display:flex;gap:14px;margin-bottom:20px;align-items:flex-start;}
+  .contact-row .ic{font-size:19px;margin-top:2px;}
+  .contact-row b{display:block;font-size:14px;color:var(--green-deep);margin-bottom:3px;}
+  .contact-row span{font-size:13.8px;color:#5c5c5c;line-height:1.6;}
+  .contact-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+  .map-wrap{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);min-height:380px;}
+  .map-wrap iframe{width:100%;height:100%;min-height:380px;border:0;display:block;}
+
+  /* Footer */
+  footer{background:var(--green-deep);color:rgba(255,255,255,.82);padding:70px 0 26px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:40px;margin-bottom:50px;}
+  .foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .foot-brand img{height:44px;filter:brightness(0) invert(1);opacity:.92;}
+  .foot-brand b{font-family:'Cormorant Garamond',serif;font-size:19px;color:#fff;}
+  footer p.tag{font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.6);max-width:280px;}
+  footer h4{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-family:'Jost',sans-serif;font-weight:500;}
+  footer ul{display:flex;flex-direction:column;gap:11px;}
+  footer ul a{font-size:13.8px;color:rgba(255,255,255,.75);transition:color .2s;}
+  footer ul a:hover{color:#fff;}
+  .foot-social{display:flex;gap:12px;margin-top:6px;}
+  .foot-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;text-align:center;font-size:12.5px;color:rgba(255,255,255,.5);}
+
+  /* Floating WhatsApp */
+  .wa-float{
+    position:fixed;bottom:26px;right:26px;z-index:800;
+    display:flex;align-items:center;gap:10px;
+    background:#25D366;color:#fff;padding:14px 20px;border-radius:100px;
+    box-shadow:0 14px 30px -8px rgba(37,211,102,.6);
+    font-size:14px;font-weight:600;
+    animation:pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{box-shadow:0 14px 30px -8px rgba(37,211,102,.6);}50%{box-shadow:0 14px 40px -4px rgba(37,211,102,.85);}}
+  .wa-float svg{width:22px;height:22px;}
+
+  :focus-visible{outline:2px solid var(--rose);outline-offset:2px;}
+
+  @media(max-width:1020px){
+    .hero .container{grid-template-columns:1fr;text-align:center;}
+    .hero p.lede{margin-left:auto;margin-right:auto;}
+    .hero-btns{justify-content:center;}
+    .hero-art{margin-top:20px;}
+    .about-grid{grid-template-columns:1fr;}
+    .svc-grid{grid-template-columns:repeat(2,1fr);}
+    .feat-grid{grid-template-columns:repeat(2,1fr);}
+    .rev-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:repeat(3,1fr);row-gap:34px;}
+    .enq-wrap{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr;row-gap:34px;}
+    nav ul{display:none;}
+  }
+  @media(max-width:640px){
+    .hamburger{display:flex;}
+    nav{display:none;}
+    .nav-cta .btn-ghost{display:none;}
+    .gal-grid{grid-template-columns:1fr 1fr;}
+    .svc-grid{grid-template-columns:1fr;}
+    .feat-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr 1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    .hero{padding:150px 0 80px;}
+    .hero-art .ring{width:300px;height:300px;}
+    .hero-art img.logo-big{width:190px;}
+    .float-chip{display:none;}
+    .wa-float span.wa-text{display:none;}
+    .wa-float{padding:14px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="nav-wrap">
+    <a href="#home" class="brand">
+      <img src="images/logo.png" alt="Fresh Flower Bouquet Shop Coimbatore logo">
+      <div class="brand-text">
+        <b>Fresh Flower Bouquet</b>
+        <span>Shop &middot; Coimbatore</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#works">Our Works</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="#enquiry" class="btn btn-ghost" style="padding:11px 20px;font-size:13.5px;">Book Enquiry</a>
+      <a href="https://wa.me/919367556002?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20flower%20bouquet%20and%20decoration%20services." target="_blank" rel="noopener" class="btn btn-primary" style="padding:11px 20px;font-size:13.5px;">💬 WhatsApp</a>
+      <button class="hamburger" id="hamBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="menu-close" id="menuClose" aria-label="Close menu">&times;</button>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#services">Our Services</a></li>
+    <li><a href="#works">Our Works</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/919367556002?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20flower%20bouquet%20and%20decoration%20services." target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:34px;width:100%;justify-content:center;">💬 WhatsApp Enquiry</a>
+</div>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="eyebrow hero-tag">Fresh Flower Bouquet Shop, Coimbatore</span>
+      <h1>Beautiful Flowers.<br><em>Beautiful Moments.</em></h1>
+      <p class="lede">Fresh flower bouquets and elegant decorations for weddings, special occasions, romantic moments and private events in Coimbatore &mdash; handcrafted around your theme, colours and budget.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/919367556002?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20flower%20bouquet%20and%20decoration%20services." target="_blank" rel="noopener" class="btn btn-primary">💬 Enquire on WhatsApp</a>
+        <a href="tel:+919367556002" class="btn btn-ghost">📞 Call Us</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="ring">
+        <img class="logo-big" src="images/logo.png" alt="Bouquet and floral monogram illustration">
+      </div>
+      <div class="float-chip chip1">🌸 Fresh Flowers</div>
+      <div class="float-chip chip2">💐 Custom Bouquets</div>
+      <div class="float-chip chip3">💍 Wedding Decor</div>
+      <div class="float-chip chip4">✨ Event Decor</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="about pad" id="about">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:60px;">
+      <span class="eyebrow">About Us</span>
+      <h2>Fresh Flowers. Creative Designs.<br>Memorable Moments.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-visual">
+        <img src="images/logo.png" alt="Shop monogram">
+        <h3>A Coimbatore studio built on fresh stems</h3>
+        <p>Every bouquet leaves our hands the same day it's cut &mdash; designed around your occasion, theme and preferences, from a single hand-tied bunch to a full wedding venue.</p>
+      </div>
+      <div class="about-copy">
+        <p class="lead">Fresh Flower Bouquet Shop Coimbatore specialises in creating beautiful fresh flower bouquets and floral decorations for every special occasion.</p>
+        <p>From elegant hand-crafted bouquets to complete wedding and event decorations, we create floral arrangements according to your occasion, theme and preferences &mdash; so every celebration feels considered, not templated.</p>
+        <div class="about-list">
+          <div class="about-item">
+            <span class="ic">💐</span>
+            <b>Fresh Flower Bouquets</b>
+            <span>Customised for birthdays, anniversaries, proposals, congratulations and celebrations.</span>
+          </div>
+          <div class="about-item">
+            <span class="ic">💍</span>
+            <b>Marriage &amp; Wedding Decoration</b>
+            <span>Stage, entrance, mandap and full venue floral arrangements for weddings and receptions.</span>
+          </div>
+          <div class="about-item">
+            <span class="ic">🛏️</span>
+            <b>Bed &amp; Room Decoration</b>
+            <span>Fresh-flower bed and room styling for wedding nights and anniversaries.</span>
+          </div>
+          <div class="about-item">
+            <span class="ic">🎉</span>
+            <b>Private Event Decoration</b>
+            <span>Birthdays, surprises, proposals and parties, decorated top to bottom in bloom.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <svg viewBox="0 0 180 22" fill="none"><path d="M0 11H60" stroke="#C9A45C" stroke-width="1"/><circle cx="90" cy="11" r="5" stroke="#B01E5C" stroke-width="1.4"/><path d="M120 11H180" stroke="#C9A45C" stroke-width="1"/></svg>
+</div>
+
+<!-- ===== Services ===== -->
+<section class="services pad" id="services">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">What We Create</span>
+      <h2>Our Services</h2>
+      <p>Every piece is made fresh to order &mdash; tell us the occasion and we'll design around it.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card"><div class="svc-ic">💐</div><h3>Bouquet Making</h3><p>Fresh flower bouquets customised for every occasion.</p><a href="#works">View Our Work →</a></div>
+      <div class="svc-card"><div class="svc-ic">💍</div><h3>Wedding Decor</h3><p>Floral stage, entrance and venue decoration.</p><a href="#works">View Our Work →</a></div>
+      <div class="svc-card"><div class="svc-ic">🛏️</div><h3>Bed Decoration</h3><p>Romantic fresh-flower bed and room decoration.</p><a href="#works">View Our Work →</a></div>
+      <div class="svc-card"><div class="svc-ic">🎂</div><h3>Birthday Decor</h3><p>Flower-based decoration for birthdays.</p><a href="#works">View Our Work →</a></div>
+      <div class="svc-card"><div class="svc-ic">💕</div><h3>Proposal Decor</h3><p>Romantic floral setups and surprise decorations.</p><a href="#works">View Our Work →</a></div>
+      <div class="svc-card"><div class="svc-ic">🎉</div><h3>Private Events</h3><p>Customised decoration for personal celebrations.</p><a href="#works">View Our Work →</a></div>
+      <div class="svc-card"><div class="svc-ic">🌹</div><h3>Rose Bouquets</h3><p>Premium rose arrangements.</p><a href="#works">View Our Work →</a></div>
+      <div class="svc-card"><div class="svc-ic">🌸</div><h3>Custom Floral Arrangements</h3><p>Designs based on your requirements.</p><a href="#works">View Our Work →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Featured work ===== -->
+<section class="featured pad-tight">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:44px;">
+      <span class="eyebrow">Signature Pieces</span>
+      <h2>Featured Work</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card f1"><div class="tag"><small>Bouquets</small><h3>Signature Bouquets</h3></div></div>
+      <div class="feat-card f2"><div class="tag"><small>Wedding</small><h3>Wedding Decoration</h3></div></div>
+      <div class="feat-card f3"><div class="tag"><small>Rooms</small><h3>Romantic Bed Decoration</h3></div></div>
+      <div class="feat-card f4"><div class="tag"><small>Events</small><h3>Private Event</h3></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Our Works / Gallery ===== -->
+<section class="gallery pad" id="works">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Our Works</span>
+      <h2>✨ Our Works</h2>
+      <p>Take a look at some of our previous bouquet and decoration work.</p>
+    </div>
+    <div class="filter-row" id="filterRow">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="bouquet">Bouquets</button>
+      <button class="filter-btn" data-filter="wedding">Wedding</button>
+      <button class="filter-btn" data-filter="bed">Bed Decor</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+    </div>
+    <div class="gal-grid" id="galGrid">
+      <div class="gal-item g-bouquet" data-cat="bouquet" data-type="photo" data-label="Hand-tied Rose Bouquet"><div class="gi-info"><span>Bouquets</span></div></div>
+      <div class="gal-item g-wedding" data-cat="wedding" data-type="video" data-label="Wedding Stage Reveal"><div class="gi-info"><span>Wedding</span><div class="play">▶</div></div></div>
+      <div class="gal-item g-events" data-cat="events" data-type="photo" data-label="Birthday Floral Setup"><div class="gi-info"><span>Events</span></div></div>
+      <div class="gal-item g-bed" data-cat="bed" data-type="photo" data-label="Anniversary Bed Decor"><div class="gi-info"><span>Bed Decor</span></div></div>
+      <div class="gal-item g-wedding" data-cat="wedding" data-type="photo" data-label="Mandap Floral Design"><div class="gi-info"><span>Wedding</span></div></div>
+      <div class="gal-item g-bouquet" data-cat="bouquet" data-type="video" data-label="Bouquet Making Process"><div class="gi-info"><span>Bouquets</span><div class="play">▶</div></div></div>
+      <div class="gal-item g-events" data-cat="events" data-type="photo" data-label="Proposal Decoration"><div class="gi-info"><span>Events</span></div></div>
+      <div class="gal-item g-wedding" data-cat="wedding" data-type="photo" data-label="Entrance Floral Arch"><div class="gi-info"><span>Wedding</span></div></div>
+      <div class="gal-item g-bed" data-cat="bed" data-type="video" data-label="Room Decoration Walkthrough"><div class="gi-info"><span>Bed Decor</span><div class="play">▶</div></div></div>
+    </div>
+    <p class="gal-note">Photos &amp; videos shown here are placeholders &mdash; swap in real shop photography before launch.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <div class="lb-box" id="lbBox"></div>
+  <div class="lb-controls">
+    <button id="lbPrev" aria-label="Previous">←</button>
+    <button id="lbNext" aria-label="Next">→</button>
+  </div>
+</div>
+
+<!-- ===== Reviews ===== -->
+<section class="reviews pad" id="reviews">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Google Reviews</span>
+      <h2 style="color:#fff;">⭐ What Our Customers Say</h2>
+      <p>A few words from customers who found us on Google.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Beautiful flowers and excellent service.</p>
+        <div class="rev-who"><div class="rev-avatar"></div><div><b>Customer Name</b><span>Google Review</span></div></div>
+      </div>
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Very nice decoration and fresh flowers.</p>
+        <div class="rev-who"><div class="rev-avatar"></div><div><b>Customer Name</b><span>Google Review</span></div></div>
+      </div>
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Our wedding stage looked stunning &mdash; thank you for the lovely work.</p>
+        <div class="rev-who"><div class="rev-avatar"></div><div><b>Customer Name</b><span>Google Review</span></div></div>
+      </div>
+    </div>
+    <div class="rev-cta"><a href="https://www.google.com/maps/search/?api=1&query=Fresh+Flower+Bouquet+Shop+Coimbatore" target="_blank" rel="noopener">⭐ View all reviews on Google</a></div>
+  </div>
+</section>
+
+<!-- ===== Why choose us ===== -->
+<section class="why pad" id="why">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2>Made With Care, Every Time</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><div class="why-ic">🌸</div><h3>Fresh Flowers</h3><p>Fresh flowers selected for beautiful arrangements.</p></div>
+      <div class="why-item"><div class="why-ic">🎨</div><h3>Customised Designs</h3><p>Bouquets and decorations designed to your requirements.</p></div>
+      <div class="why-item"><div class="why-ic">💍</div><h3>Wedding Specialists</h3><p>Floral decoration for weddings and marriage functions.</p></div>
+      <div class="why-item"><div class="why-ic">🎉</div><h3>All Types of Events</h3><p>From small personal celebrations to larger events.</p></div>
+      <div class="why-item"><div class="why-ic">❤️</div><h3>Attention to Detail</h3><p>Every arrangement is created with care.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Enquiry form ===== -->
+<section class="enquiry pad" id="enquiry">
+  <div class="container">
+    <div class="enq-wrap">
+      <div class="enq-side">
+        <span class="eyebrow" style="color:#F7DDE3;">Get A Quote</span>
+        <h3 style="margin-top:14px;">Tell us about your requirement</h3>
+        <p>Fill in a few details and we'll open WhatsApp with your enquiry ready to send &mdash; no back-and-forth needed to get started.</p>
+        <ul>
+          <li>💐 We reply with pricing and availability</li>
+          <li>📅 Best booked 2&ndash;3 weeks ahead for weddings</li>
+          <li>🎨 Share reference photos on WhatsApp anytime</li>
+        </ul>
+      </div>
+      <div class="enq-form">
+        <form id="enquiryForm">
+          <div class="form-row">
+            <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" placeholder="Your name" required></div>
+            <div class="field"><label for="f-phone">Phone Number</label><input id="f-phone" type="tel" placeholder="+91" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="f-occasion">Occasion</label><input id="f-occasion" type="text" placeholder="e.g. Wedding, Birthday"></div>
+            <div class="field">
+              <label for="f-service">Service Required</label>
+              <select id="f-service">
+                <option value="">Select Service</option>
+                <option>Bouquet</option>
+                <option>Wedding Decoration</option>
+                <option>Bed Decoration</option>
+                <option>Birthday Decoration</option>
+                <option>Proposal Decoration</option>
+                <option>Private Event</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="f-date">Event Date</label><input id="f-date" type="date"></div>
+            <div class="field"><label for="f-location">Location</label><input id="f-location" type="text" placeholder="Area in Coimbatore"></div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label for="f-budget">Approximate Budget</label><input id="f-budget" type="text" placeholder="e.g. ₹5,000 &ndash; ₹10,000"></div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label for="f-message">Message</label><textarea id="f-message" placeholder="Tell us more about what you'd like..."></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary">💬 Send Enquiry on WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="contact pad" id="contact">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Visit Us</span>
+      <h2>🌸 Visit Our Shop</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="sub">Fresh Flower Bouquet Shop Coimbatore</span>
+        <h3>Get in Touch</h3>
+        <div style="margin-top:26px;">
+          <div class="contact-row">
+            <span class="ic">📍</span>
+            <div><b>Address</b><span>41-A, West, E Lokamanya St, Opp. RCAD to Tanishq Jewellery, Opposite to DoIt Industries Private Limited, R.S. Puram, Coimbatore, Tamil Nadu &ndash; 641002</span></div>
+          </div>
+          <div class="contact-row">
+            <span class="ic">📞</span>
+            <div><b>Phone</b><span>093675 56002</span></div>
+          </div>
+          <div class="contact-row">
+            <span class="ic">💬</span>
+            <div><b>WhatsApp</b><span>Chat with us anytime for enquiries and quotes</span></div>
+          </div>
+        </div>
+        <div class="contact-btns">
+          <a href="tel:+919367556002" class="btn btn-gold">📞 Call Now</a>
+          <a href="https://wa.me/919367556002?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20flower%20bouquet%20and%20decoration%20services." target="_blank" rel="noopener" class="btn btn-primary">💬 WhatsApp</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Fresh+Flower+Bouquet+Shop+Coimbatore" target="_blank" rel="noopener" class="btn btn-ghost">📍 Get Directions</a>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=Fresh%20Flower%20Bouquet%20Shop%20Coimbatore&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Shop location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.png" alt="Logo"><b>Fresh Flower Bouquet Shop</b></div>
+        <p class="tag">Fresh flowers for beautiful moments &mdash; bouquets and event decoration across Coimbatore.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#works">Our Works</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Bouquets</a></li>
+          <li><a href="#services">Wedding Decor</a></li>
+          <li><a href="#services">Bed Decor</a></li>
+          <li><a href="#services">Event Decor</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 093675 56002</li>
+          <li>📍 R.S. Puram, Coimbatore</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Fresh Flower Bouquet Shop Coimbatore. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- ===== Floating WhatsApp ===== -->
+<a class="wa-float" href="https://wa.me/919367556002?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20flower%20bouquet%20and%20decoration%20services." target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" fill="#fff"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.7 4.607 1.902 6.475L4 29l7.723-1.867A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3zm6.995 17.02c-.293.826-1.454 1.51-2.38 1.706-.633.132-1.46.238-4.24-.91-3.556-1.464-5.847-5.06-6.024-5.294-.176-.234-1.44-1.913-1.44-3.651 0-1.737.912-2.593 1.235-2.948.322-.354.704-.443.94-.443.234 0 .47.002.674.012.216.01.507-.082.792.605.293.705 1 2.44 1.088 2.617.088.176.147.382.03.616-.117.234-.176.382-.352.588-.176.206-.372.46-.53.617-.176.176-.36.367-.155.72.206.353.914 1.51 1.965 2.446 1.35 1.204 2.49 1.577 2.843 1.753.352.176.558.147.763-.088.206-.234.882-1.03 1.117-1.383.234-.353.47-.293.792-.176.323.117 2.05.968 2.402 1.144.352.176.586.264.674.412.088.147.088.853-.205 1.68z"/></svg>
+  <span class="wa-text">WhatsApp</span>
+</a>
+
+<script>
+  // Mobile menu
+  const hamBtn = document.getElementById('hamBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuClose = document.getElementById('menuClose');
+  const scrim = document.getElementById('scrim');
+  function openMenu(){mobileMenu.classList.add('open');scrim.classList.add('open');}
+  function closeMenu(){mobileMenu.classList.remove('open');scrim.classList.remove('open');}
+  hamBtn.addEventListener('click', openMenu);
+  menuClose.addEventListener('click', closeMenu);
+  scrim.addEventListener('click', closeMenu);
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
+
+  // Gallery filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galItems = document.querySelectorAll('.gal-item');
+  filterBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      filterBtns.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      galItems.forEach(item=>{
+        item.style.display = (f==='all' || item.dataset.cat===f) ? 'flex' : 'none';
+      });
+    });
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lbBox = document.getElementById('lbBox');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+  let currentIndex = 0;
+  let visibleItems = [];
+
+  function refreshVisible(){
+    visibleItems = Array.from(galItems).filter(i => i.style.display !== 'none');
+  }
+  function showLightbox(index){
+    refreshVisible();
+    if(!visibleItems.length) return;
+    currentIndex = (index + visibleItems.length) % visibleItems.length;
+    const item = visibleItems[currentIndex];
+    const label = item.dataset.label;
+    const type = item.dataset.type;
+    const bg = getComputedStyle(item).background;
+    lbBox.style.background = bg.includes('gradient') ? window.getComputedStyle(item, '::before').backgroundImage : '';
+    lbBox.style.backgroundImage = window.getComputedStyle(item, '::before').backgroundImage;
+    lbBox.innerHTML = (type==='video' ? '▶ ' : '') + label;
+    lightbox.classList.add('open');
+  }
+  galItems.forEach((item)=>{
+    item.addEventListener('click', ()=>{
+      refreshVisible();
+      const idx = visibleItems.indexOf(item);
+      showLightbox(idx);
+    });
+  });
+  lbClose.addEventListener('click', ()=> lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) lightbox.classList.remove('open'); });
+  lbPrev.addEventListener('click', ()=> showLightbox(currentIndex-1));
+  lbNext.addEventListener('click', ()=> showLightbox(currentIndex+1));
+  document.addEventListener('keydown', (e)=>{
+    if(!lightbox.classList.contains('open')) return;
+    if(e.key==='Escape') lightbox.classList.remove('open');
+    if(e.key==='ArrowLeft') showLightbox(currentIndex-1);
+    if(e.key==='ArrowRight') showLightbox(currentIndex+1);
+  });
+
+  // Enquiry form -> WhatsApp
+  document.getElementById('enquiryForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('f-name').value;
+    const phone = document.getElementById('f-phone').value;
+    const occasion = document.getElementById('f-occasion').value;
+    const service = document.getElementById('f-service').value;
+    const date = document.getElementById('f-date').value;
+    const location = document.getElementById('f-location').value;
+    const budget = document.getElementById('f-budget').value;
+    const message = document.getElementById('f-message').value;
+
+    let text = `Hello, I would like to enquire about your flower bouquet and decoration services.\n\n`;
+    text += `Name: ${name}\n`;
+    text += `Phone: ${phone}\n`;
+    if(occasion) text += `Occasion: ${occasion}\n`;
+    if(service) text += `Service Required: ${service}\n`;
+    if(date) text += `Event Date: ${date}\n`;
+    if(location) text += `Location: ${location}\n`;
+    if(budget) text += `Approximate Budget: ${budget}\n`;
+    if(message) text += `Message: ${message}\n`;
+
+    const url = `https://wa.me/919367556002?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  });
+
+  // Header shadow on scroll
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', ()=>{
+    header.style.boxShadow = window.scrollY > 12 ? '0 8px 24px -16px rgba(41,41,41,.3)' : 'none';
+  });
+</script>
+</body>
+</html>
