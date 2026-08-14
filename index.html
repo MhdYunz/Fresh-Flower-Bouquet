@@ -332,9 +332,20 @@
   .field input,.field select,.field textarea{
     padding:12px 14px;border-radius:10px;border:1px solid rgba(49,92,69,.22);
     font-family:'Jost',sans-serif;font-size:14px;background:var(--cream);color:var(--ink);
+    width:100%;height:48px;line-height:1.2;-webkit-appearance:none;appearance:none;
   }
+  .field select{
+    background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23315C45' d='M5.5 7.5l4.5 4.5 4.5-4.5z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 14px center;background-size:14px;padding-right:38px;
+  }
+  .field input[type="date"]{
+    background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23315C45' d='M6 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H8V2H6zM4 8h12v8H4V8z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 14px center;background-size:15px;padding-right:38px;
+  }
+  .field input[type="date"]::-webkit-calendar-picker-indicator{opacity:0;-webkit-appearance:none;position:absolute;right:0;width:48px;height:48px;margin:0;}
+  .field input[type="date"]{position:relative;}
+  .field textarea{height:auto;min-height:80px;resize:vertical;}
   .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--rose);outline-offset:1px;background:#fff;}
-  .field textarea{resize:vertical;min-height:80px;}
   .enq-form .btn-primary{width:100%;justify-content:center;margin-top:6px;padding:16px;font-size:15.5px;}
 
   /* Contact + map */
@@ -436,6 +447,8 @@
     .feat-grid{grid-template-columns:1fr;}
     .why-grid{grid-template-columns:1fr 1fr;}
     .form-row{grid-template-columns:1fr;}
+    .enq-form{padding:30px 22px;}
+    .enq-side{padding:34px 26px;}
     .foot-grid{grid-template-columns:1fr;}
     .hero{padding:150px 0 80px;}
     .hero-art .ring{width:300px;height:300px;}
