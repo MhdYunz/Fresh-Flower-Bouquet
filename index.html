@@ -420,9 +420,17 @@
     nav ul{display:none;}
   }
   @media(max-width:640px){
-    .hamburger{display:flex;}
+    .hamburger{display:flex;order:2;}
     nav{display:none;}
+    .nav-wrap{flex-wrap:wrap;row-gap:10px;padding:10px 16px;}
+    .brand{order:1;flex:1 1 auto;min-width:0;gap:9px;}
+    .brand img{height:36px;flex-shrink:0;}
+    .brand-text{min-width:0;}
+    .brand-text b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;}
+    .brand-text span{font-size:8px;letter-spacing:1px;white-space:nowrap;}
+    .nav-cta{order:3;width:100%;flex-basis:100%;}
     .nav-cta .btn-ghost{display:none;}
+    .nav-cta .btn-primary{flex:1;justify-content:center;width:100%;}
     .gal-grid{grid-template-columns:1fr 1fr;}
     .svc-grid{grid-template-columns:1fr;}
     .feat-grid{grid-template-columns:1fr;}
@@ -460,10 +468,10 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <button class="hamburger" id="hamBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
     <div class="nav-cta">
       <a href="#enquiry" class="btn btn-ghost" style="padding:11px 20px;font-size:13.5px;">Book Enquiry</a>
       <a href="https://wa.me/919367556002?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20flower%20bouquet%20and%20decoration%20services." target="_blank" rel="noopener" class="btn btn-primary" style="padding:11px 20px;font-size:13.5px;">💬 WhatsApp</a>
-      <button class="hamburger" id="hamBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
